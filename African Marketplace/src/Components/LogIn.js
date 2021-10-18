@@ -1,10 +1,10 @@
-Login.js
+
 import React from 'react';
 
 export default function LogIn() {
 
-    return {
-        <form>
+    return (
+        <form >
             <div>
                 <div>
                 <label>Username
@@ -31,5 +31,7 @@ export default function LogIn() {
                 </div>
             
             </div>
-    }
+            </form>
+    )
 }
+
