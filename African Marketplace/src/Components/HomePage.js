@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from '../images/banner.jpg';
+// import banner from '../images/banner.jpg';
 
 export default function HomePage() {
 
@@ -9,7 +9,7 @@ export default function HomePage() {
             {/* top section */}
             <div>
                 
-                <img src={banner} />
+                {/* <img src={banner} /> */}
                 <h1>African Marketplace</h1>
                 <h2>Sauti Africa empowers small business owners, particularly women, <br />to improve their business and economic opportunities<br /> to grow out of poverty.</h2>
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import * as yup from 'yup'
+// import * as yup from 'yup'
 
 // const initialFormValues = { email: '', username: '', password: ''}
 // const initialFormErrors = { email: '', username: '', password: ''}
@@ -34,6 +34,7 @@ export default function SignUp() {
     //     .then(() => setFormErrors({ ...formErrors, [name]: ''}))
     //     .catch(err => setFormErrors({ ...formErrors, [name]: err.errors[0]}))
     // }
+    /*
     return (
         <form onSubmit={onSubmit}>
             <div>
@@ -77,5 +78,5 @@ export default function SignUp() {
             </div>
         </form>
     )
-
+*/
 }

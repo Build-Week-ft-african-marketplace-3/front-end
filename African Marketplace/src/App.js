@@ -14,7 +14,7 @@ function App() {
         <Route path="/" component={HomePage}/>
         <Route path="/signup" component={SignUp}/>
         <Route path="/login" component={LogIn} />
-        <Route path="/listing" component={Listing}/>
+        <Route path="/listings" component={Listing}/>
       </Router>
     </div>
   );

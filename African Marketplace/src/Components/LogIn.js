@@ -1,8 +1,9 @@
 
 import React from 'react';
 
-export default function LogIn() {
 
+export default function LogIn() {
+/*
     return (
         <form >
             <div>
@@ -33,5 +34,6 @@ export default function LogIn() {
             </div>
             </form>
     )
+*/
 }
 

@@ -6,7 +6,7 @@ const NavBar = () => {
 		 			<Link style = {{padding: '10px'}} to='/'>Home</Link>
                     <Link style = {{padding: '10px'}} to='/signup'> SignUp</Link>
                     <Link style = {{padding: '10px'}} to='/login'> Login </Link>
-                    <Link style = {{padding: '10px'}} to='/Listings'> Listings </Link>
+                    <Link style = {{padding: '10px'}} to='/listings'> Listings </Link>
 	</div>)
 }
 
