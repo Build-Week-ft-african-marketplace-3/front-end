@@ -2,6 +2,21 @@
 
 const dummy_data = [
 	{
+		id: 1,
+		commodity_category: "Animal Products",
+		sub_category: "Animal Products - Other",
+		commodity_product: "Eggs",
+	},
+	{
+		id: 2,
+		commodity_category: "Animal Products",
+		sub_category: "Animal Products - Other",
+		commodity_product: "Milk",
+	}
+];
+/*
+const dummy_data = [
+	{
 	  commodity_category: "Animal Products",
 	  sub_category: "Animal Products - Other",
 	  commodity_product: "Eggs",
@@ -591,6 +606,7 @@ const dummy_data = [
 	  sub_category: "Tomatoes",
 	  commodity_product: "Tomatoes",
 	},
-  ];
+];
+ */
 
-  export default dummy_data;
+export default dummy_data;
