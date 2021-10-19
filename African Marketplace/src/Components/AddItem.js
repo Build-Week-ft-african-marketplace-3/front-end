@@ -6,9 +6,9 @@ import axiosWithAuth from '../utils/axiosWithAuth';
 
 const AddItem = () => {
     const [product, setProduct] = useState({
-        commodity_category: "",
-        sub_category: "",
-        commodity_product: ""
+        name: "",
+        price: "",
+        description: ""
     });
 
     const { push } = useHistory();
@@ -28,7 +28,7 @@ const AddItem = () => {
         //handle errors if any
     }
     
-    const { commodity_category, sub_category, commodity_product } = product;
+    const { name, price, description } = product;
 
 
 
@@ -38,15 +38,15 @@ const AddItem = () => {
             <div className="modal-body">					
                         <div className="form-group">
                             <label>Title</label>
-                            <input value={commodity_category} onChange={handleChange} name="commodity_category" type="text" className="form-control"/>
+                            <input value={name} onChange={handleChange} name="name" type="text" className="form-control"/>
                         </div>
                         <div className="form-group">
                             <label>Director</label>
-                            <input value={sub_category} onChange={handleChange} name="sub_category" type="text" className="form-control"/>
+                            <input value={price} onChange={handleChange} name="price" type="text" className="form-control"/>
                         </div>
                         <div className="form-group">
                             <label>Genre</label>
-                            <input value={commodity_product} onChange={handleChange} name="commodity_product" type="text" className="form-control"/>
+                            <input value={description} onChange={handleChange} name="commodity_product" type="text" className="form-control"/>
                         </div>
                                         
             </div>
