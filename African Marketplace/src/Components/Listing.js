@@ -17,7 +17,7 @@ const Listing = () => {
 		categories.push(listings[i].commodity_category);
 	}
 	console.log('Categories: ', categories);
-	// .... more work to be done
+	// ..... more work to be done
 	
 	// for (let i = 0; i < categories.length; i++){
 	// 	console.log(" -- " + categories[i].toUpperCase() + " -- ");  //title elements

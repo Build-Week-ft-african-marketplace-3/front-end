@@ -4,7 +4,7 @@ const Item = (props) => {
 	
 	const { item } = props;
 	
-    // ----- Post Item to the Listings page
+    // ------ Post Item to the Listings page
 	return (
         <div className='item-container'>
             <p><span style={{fontWeight: 'bold'}}>Product Name:</span> {item.commodity_product}</p>
