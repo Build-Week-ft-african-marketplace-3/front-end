@@ -8,7 +8,8 @@ const AddItem = () => {
     const [product, setProduct] = useState({
         name: "",
         price: "",
-        description: ""
+        description: "",
+        location: ""
     });
 
     const { push } = useHistory();
@@ -28,7 +29,7 @@ const AddItem = () => {
         //handle errors if any
     }
     
-    const { name, price, description } = product;
+    const { name, price, description, location } = product;
 
 
 
@@ -37,16 +38,20 @@ const AddItem = () => {
             <form onSubmit={handleSubmit}>
             <div className="modal-body">					
                         <div className="form-group">
-                            <label>Title</label>
+                            <label>Name</label>
                             <input value={name} onChange={handleChange} name="name" type="text" className="form-control"/>
                         </div>
                         <div className="form-group">
-                            <label>Director</label>
+                            <label>Price</label>
                             <input value={price} onChange={handleChange} name="price" type="text" className="form-control"/>
                         </div>
                         <div className="form-group">
-                            <label>Genre</label>
-                            <input value={description} onChange={handleChange} name="commodity_product" type="text" className="form-control"/>
+                            <label>Description</label>
+                            <input value={description} onChange={handleChange} name="description" type="text" className="form-control"/>
+                        </div>
+                        <div className="form-group">
+                            <label>Location</label>
+                            <input value={location} onChange={handleChange} name="location" type="text" className="form-control"/>
                         </div>
                                         
             </div>
