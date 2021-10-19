@@ -5,6 +5,7 @@ import SignUp from './Components/SignUp';
 import { Route, Redirect} from "react-router-dom";
 import LogIn from './Components/LogIn';
 import Listing from './Components/Listing';
+import AddItem from './Components/AddItem';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         </Route>
         <Route path="/signup" component={SignUp}/>
         <Route path="/login" component={LogIn} />
-        <Route path="/listings" component={Listing}/>
+      <Route path="/listings" component={Listing} />
+      <Route path="/addlisting" component={AddItem}/>
     </div>
   );
 }
