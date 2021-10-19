@@ -13,11 +13,10 @@ const Item = (props) => {
                 <Card body>
                     <CardHeader tag="h5">{item.commodity_product} </CardHeader>
                     <CardBody>
-                        <CardTitle>Product Price: *Placeholder* </CardTitle>
-                        <CardText>Product Description here</CardText>
-                        <Button>Buy</Button>
+                        <CardTitle>${item.price}</CardTitle>
+                        <CardText>description goes here</CardText>
                     </CardBody>
-                    <CardFooter>Product Location here!</CardFooter>
+                    <CardFooter>{item.location}</CardFooter>
                 </Card>
             </Container>
         
