@@ -11,6 +11,7 @@ export default function HomePage() {
             <header>
                 
                 <hr />
+                {/* <img src={banner} /> */}
                 <h1>African Marketplace</h1>
                 <hr />
                 <h2>Sauti Africa empowers small business owners, particularly women, <br />to improve their business and economic opportunities<br /> to grow out of poverty.</h2>

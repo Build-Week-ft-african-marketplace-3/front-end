@@ -1,4 +1,6 @@
-export const dummy_data = [
+
+
+const dummy_data = [
 	{
 	  commodity_category: "Animal Products",
 	  sub_category: "Animal Products - Other",
@@ -590,3 +592,5 @@ export const dummy_data = [
 	  commodity_product: "Tomatoes",
 	},
   ];
+
+  export default dummy_data;
