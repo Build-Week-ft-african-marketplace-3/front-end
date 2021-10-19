@@ -2,6 +2,170 @@
 
 const dummy_data = [
 	{
+		id: 1,
+		commodity_category: "Animal Products",
+		sub_category: "Animal Products - Other",
+		commodity_product: "Eggs",
+		price: 1.50,
+		location: 'Kenya'
+	},
+	{
+		id: 2,
+		commodity_category: "Animal Products",
+		sub_category: "Animal Products - Other",
+		commodity_product: "Milk",
+		price: 2.50,
+		location: 'Ethiopia'
+	},
+	{
+		id: 3,
+		commodity_category: "Animal Products",
+		sub_category: "Animal Products - Other",
+		commodity_product: "Nile Perch",
+		price: 11.75,
+		location: 'Kenya'
+	},
+	{
+		id: 4,
+		commodity_category: "Animal Products",
+		sub_category: "Animal Products - Other",
+		commodity_product: "Processed Honey",
+		price: 8.00,
+		location: 'Ethiopia'
+	},
+	{
+		id: 5,
+		commodity_category: "Beans",
+		sub_category: "Beans",
+		commodity_product: "Beans",
+		price: 3.25,
+		location: 'Kenya'
+	},
+	{
+		id: 6,
+		commodity_category: "Beans",
+		sub_category: "Beans",
+		commodity_product: "Beans (K132)",
+		price: 2.75,
+		location: 'Ethiopia'
+	},
+	{
+		id: 7,
+		commodity_category: "Cereals - Maize",
+		sub_category: "Maize",
+		commodity_product: "Maize Bran",
+		price: 1.50,
+		location: 'Kenya'
+	},
+	{
+		id: 8,
+		commodity_category: "Cereals - Maize",
+		sub_category: "Maize",
+		commodity_product: "Maize Flour",
+		price: 2.25,
+		location: 'Ethiopia'
+	},
+	{
+		id: 9,
+		commodity_category: "Cereals - Other",
+		sub_category: "Barley",
+		commodity_product: "Barley",
+		price: 2.00,
+		location: 'Kenya'
+	},
+	{
+		id: 10,
+		commodity_category: "Cereals - Other",
+		sub_category: "Millet",
+		commodity_product: "Bulrush Millet",
+		price: 2.00,
+		location: 'Ethiopia'
+	},
+	{
+		id: 11,
+		commodity_category: "Fruits",
+		sub_category: "Avocado",
+		commodity_product: "Avocado",
+		price: 5.00,
+		location: 'Kenya'
+	},
+	{
+		id: 12,
+		commodity_category: "Fruits",
+		sub_category: "Bananas",
+		commodity_product: "Apple Bananas",
+		price: 1.25,
+		location: 'Ethiopia'
+	},
+	{
+		id: 13,
+		commodity_category: "Fruits",
+		sub_category: "Bananas",
+		commodity_product: "Cavendish (Bogoya)",
+		price: 1.50,
+		location: 'Kenya'
+	},
+	{
+		id: 14,
+		commodity_category: "Fruits",
+		sub_category: "Bananas",
+		commodity_product: "Cooking Bananas",
+		price: 0.75,
+		location: 'Ethiopia'
+	},
+	{
+		id: 15,
+		commodity_category: "Other",
+		sub_category: "Coffee",
+		commodity_product: "Coffee (Arabica)",
+		price: 5.50,
+		location: 'Kenya'
+	},
+	{
+		id: 16,
+		commodity_category: "Other",
+		sub_category: "Coffee",
+		commodity_product: "Coffee (Robusta)",
+		price: 3.25,
+		location: 'Ethiopia'
+	},
+	{
+		id: 17,
+		commodity_category: "Other",
+		sub_category: "Cotton",
+		commodity_product: "Unprocessed Cotton",
+		price: 10.00,
+		location: 'Kenya'
+	},
+	{
+		id: 18,
+		commodity_category: "Other",
+		sub_category: "Tea",
+		commodity_product: "Unprocessed Tea",
+		price: 2.00,
+		location: 'Ethiopia'
+	},
+	{
+		id: 19,
+		commodity_category: "Vegetables",
+		sub_category: "Onions",
+		commodity_product: "Spring Onions",
+		price: 3.00,
+		location: 'Kenya'
+	},
+	{
+		id: 20,
+		commodity_category: "Vegetables",
+		sub_category: "Tomatoes",
+		commodity_product: "Tomatoes",
+		price: 3.25,
+		location: 'Ethiopia'
+	}
+];
+
+/*
+const dummy_data = [
+	{
 	  commodity_category: "Animal Products",
 	  sub_category: "Animal Products - Other",
 	  commodity_product: "Eggs",
@@ -591,6 +755,7 @@ const dummy_data = [
 	  sub_category: "Tomatoes",
 	  commodity_product: "Tomatoes",
 	},
-  ];
+];
+ */
 
-  export default dummy_data;
+export default dummy_data;
