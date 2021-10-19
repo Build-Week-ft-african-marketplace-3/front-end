@@ -53,7 +53,6 @@ export default function Search (props) {
                 </label>
                 <button id='search-btn'>My Search</button>
             </form>
-            <hr/>
         </div>
     )
 

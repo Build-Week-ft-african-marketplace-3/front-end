@@ -1,4 +1,5 @@
 import React from "react";
+import { Card, Button, CardHeader, CardBody, CardTitle, CardText, CardFooter, Row, Col, Container } from 'reactstrap';
 
 const Item = (props) => {
 	
@@ -6,13 +7,27 @@ const Item = (props) => {
 	
     // ----- Post Item to the Listings page
 	return (
-        <div className='item-container'>
-            <p><span style={{fontWeight: 'bold'}}>Product Name:</span> {item.commodity_product}</p>
-            <p><span style={{fontWeight: 'bold'}}>Price:</span> {item.price}</p>
-            <p><span style={{fontWeight: "bold"}}>Location:</span> {item.location}</p>
-            <p><span style={{fontWeight: 'bold'}}>Category:</span> {item.commodity_category}</p>
-            <hr/>
-        </div>
+        
+        
+            <Container style={{ width: '18rem' }}>    
+                <Card body>
+                    <CardHeader tag="h5">{item.commodity_product} </CardHeader>
+                    <CardBody>
+                        <CardTitle>Product Price: *Placeholder* </CardTitle>
+                        <CardText>Product Description here</CardText>
+                        <Button>Buy</Button>
+                    </CardBody>
+                    <CardFooter>Product Location here!</CardFooter>
+                </Card>
+            </Container>
+        
+
 	)
 }
 export default Item;
+
+{/* <p><span style={{fontWeight: 'bold'}}>Product Name:</span> {item.commodity_product}</p>
+            <p><span style={{fontWeight: 'bold'}}>Price:</span> * Placeholder* </p>
+            <p><span style={{fontWeight: 'bold'}}>Category:</span> {item.commodity_category}</p>
+            <p><span style={{fontWeight: "bold"}}>Location:</span> * Placeholder *</p>
+            <hr/> */}
