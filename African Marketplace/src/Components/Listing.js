@@ -9,24 +9,23 @@ const Listing = () => {
 	
 	// ----- Set State + Initial Values ----- 
 	const [ listings, setListings ] = useState(dummy_data);
-	const [ searchResults, setSearchResults ] = useState([])
+	const [ searchResults, setSearchResults ] = useState(listings) // QUESTION: Pre-pop all or start empty
 
-	// ----- Create a category header -----
+	/* ----- Create a category header ----- <<<<< Will handle tomorrow
 	let categories = [];
 	for (let i = 0; i < listings.length; i++){
 		!categories.includes(listings[i].commodity_category) && 
 		categories.push(listings[i].commodity_category);
 	}
-	
-	/* .... TBD: Create category header
-		for (let i = 0; i < categories.length; i++){
-			console.log(" -- " + categories[i].toUpperCase() + " -- ");  //title elements
-			let filtered = data.filter(item => item.cat === categories[i]);
-			console.log(filtered);
-		}
+
+	for (let i = 0; i < categories.length; i++){
+		console.log(" -- " + categories[i].toUpperCase() + " -- ");  //title elements
+		let filtered = data.filter(item => item.cat === categories[i]);
+		console.log(filtered);
+	}
 	*/
 
-	/* ----- API GET PLACEHOLDER ----
+	/* ----- API Get Placeholder ----
 	//----- Get Listing Data Via API -----
     useEffect ( () => {
         axios.get('https://african-marketplace-03.herokuapp.com/')
