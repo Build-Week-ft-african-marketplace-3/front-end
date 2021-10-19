@@ -12,8 +12,8 @@ export default function LogIn() {
                     type="text"
                     name="username"
                     id="username"
-                    value={values.username}
-                    onChange={onChange}
+                    // value={values.username}
+                    // onChange={onChange}
                     />
                 </label>
                 </div>
@@ -23,11 +23,11 @@ export default function LogIn() {
                     type="password"
                     name="password"
                     id="password"
-                    value={values.password}
-                    onChange={onChange}
+                    // value={values.password}
+                    // onChange={onChange}
                     />
                 </label>
-                <button disabled={disabled}>Login</button>
+                <button /*disabled={disabled}*/>Login</button>
                 </div>
             
             </div>

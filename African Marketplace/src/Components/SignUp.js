@@ -35,44 +35,44 @@ export default function SignUp() {
     //     .catch(err => setFormErrors({ ...formErrors, [name]: err.errors[0]}))
     // }
     return (
-        <form onSubmit={onSubmit}>
+        <form /*onSubmit={onSubmit}*/>
             <div>
                 <h2>Sign Up!</h2>
 
                 <div>
-                    <div>{errors.email}</div>
+                    <div>{/*errors.email*/}</div>
                     <label>Email
                     <input
                         type="email"
                         name="email"
                         id ="email"
-                        value={values.email}
-                        onChange={onChange}
+                        // value={values.email}
+                        // onChange={onChange}
                     />
                     </label>
                 </div>
-                <div>{errors.username}</div>
+                <div>{/*errors.username*/}</div>
                     <label>Username
                     <input
                         type="text"
                         name="username"
                         id ="username"
-                        value={values.username}
-                        onChange={onChange}
+                        // value={values.username}
+                        // onChange={onChange}
                     />
                     </label>
                 </div>
-                <div><div>{errors.password}</div>
+                <div><div>{/*errors.password*/}</div>
                     <label>Password
                     <input
                         type="password"
                         name="password"
                         id ="password"
-                        value={values.password}
-                        onChange={onChange}
+                        // value={values.password}
+                        // onChange={onChange}
                     />
                     </label>
-                    <button disabled={disabled}>Sign Up!</button>
+                    <button /*disabled={disabled}*/>Sign Up!</button>
             
             </div>
         </form>
