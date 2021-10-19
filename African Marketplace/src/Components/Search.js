@@ -46,7 +46,6 @@ export default function Search () {
                 </label>
                 <button id='search-btn'>My Search</button>
             </form>
-            <hr/><hr/>
         </div>
     )
 

@@ -44,7 +44,7 @@ const Listing = () => {
 		<div>
 			<h2>Market Place Listings</h2>
 			<Search />
-			<div className='listings-container'>
+			<div /*className='listings-container'*/>
 				{listings.map( item => (
 					<Item item={item}/>
 				))}	
