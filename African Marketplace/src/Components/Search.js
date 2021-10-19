@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import axios from 'axios';
 
 export default function Search () {
 
@@ -17,6 +18,18 @@ export default function Search () {
     const onSubmit = (event) => {
         event.preventDefault();
         console.log('Search Text: ', searchText)
+        /*
+        axios.post('https://african-marketplace-03.herokuapp.com/', event.target.value.trim())
+            .then(response => {
+                console.log('Post Response: ', response);
+            })
+            .catch(error => {
+                console.log('Post error: ', error);
+            })
+            .finally( () => {
+                setSearchText(initialFormValue);
+            })
+        */
     }
 
     return (
