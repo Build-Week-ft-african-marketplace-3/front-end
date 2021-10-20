@@ -84,29 +84,29 @@ q:before, q:after {
 }
 
 body {
-  background-color: #577590;
+  background-color: #003566;
   color: #FAF9F6;
   font-family: 'Georama', sans-serif;
   font-size: 1em;
 }
 
-button {
+/* button {
   background-color: #f3722c;
   color: #FAF9F6;
   height: 2rem;
   width: 6rem;
   border-radius: 6px;
-}
+} */
 
-hr {
-  width: 25%;
-}
+/* hr {
+  width: 30%;
+} */
 
-h1 {
+/* h1 {
   font-size: 2em;
-}
+} */
 
-header {
+/* header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -114,9 +114,9 @@ header {
   align-items: center;
   margin-top: 10%;
   margin-bottom: 10%;
-}
+} */
 
-footer {
+/* footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -128,18 +128,18 @@ footer {
 footer a {
   display: flex;
   align-content: center;
-}
+} */
 
 /* Container */
 
-.container {
+/* .container {
 
-}
+} */
 
 
 /* Banner */
 
-img {
+/* img {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -147,4 +147,4 @@ img {
   width: 100%;
   position: relative;
   z-index: -1;
-}
+} */
