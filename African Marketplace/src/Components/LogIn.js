@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useHistory } from 'react-router';
+import Banner from '../images/banner.jpg';
+
 
 
 const LogIn = () => {
@@ -33,10 +35,12 @@ const LogIn = () => {
     }
     return (
         <ComponentContainer>
+            <img className='login-img' src={Banner} alt='cartons of figs and strawberries'/>
         <ModalContainer>
             <Title>Welcome to African Marketplace</Title>
             <Title>Please enter your account information.</Title>
             <div>
+                    
             <FormGroup onSubmit={login}>
                 <Label>Username:
             <Input
@@ -69,7 +73,7 @@ const ComponentContainer = styled.div`
     height: 70%;
     justify-content: center;
     align-items: center;
-    display:flex;
+    display:flex;   
 `
 
 const ModalContainer = styled.div`
@@ -81,6 +85,7 @@ const ModalContainer = styled.div`
     box-shadow: 0px 1px 6px -2px rgb(210, 210, 210);
     margin-top: 5%;
     opacity: 0.85;
+    
 `
 const Title = styled.label`
     display: block;
@@ -88,6 +93,7 @@ const Title = styled.label`
     color: #FFC300;
     margin-bottom: 3%;
 `
+
 
 const Label = styled.label`
     display: block;

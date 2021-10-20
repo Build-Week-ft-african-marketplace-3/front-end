@@ -46,11 +46,24 @@
 .signupBtn:hover {
     background-color: #FFD60A;
 }
-/* .signup-img{
+.signup-img{
     position:absolute;
     opacity: 0.5;
     z-index: -1;
-    height:100%;
+    height:90%;
     width: 100%;
+    margin-left: -50%;
+    margin-top: -6.3%;
   
-}  */
+} 
+
+/*Login page Background image*/
+ .login-img{
+    position:absolute;
+    opacity: 0.5;
+    z-index: -1;
+    height:90%;
+    width: 100%;
+    /* margin-left: -50%; */
+    margin-top: 21%;
+}
