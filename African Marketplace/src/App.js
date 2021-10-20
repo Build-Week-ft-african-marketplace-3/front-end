@@ -9,6 +9,7 @@ import LogIn from './Components/LogIn';
 import Listing from './Components/Listing';
 import AddItem from './Components/AddItem';
 import PrivateRoute from './utils/PrivateRoute';
+import Logout from './Components/Logout';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         <Route path="/signup" component={SignUp}/>
         <Route path="/login" component={LogIn} />
       <PrivateRoute path="/listings" component={Listing} />
-      <Route path="/addlisting" component={AddItem}/>
+      <PrivateRoute path="/addlisting" component={AddItem} />
+      <PrivateRoute path="/logout" component={Logout}/>
     </div>
   );
 }
