@@ -22,7 +22,7 @@ export default function SignUp() {
     const signupSubmit = e => {
         e.preventDefault();
         axios
-            .post("https://african-marketplace-03.herokuapp.com/api/auth/signup",credentials)
+            .post("https://african-marketplace-03.herokuapp.com/api/auth/register",credentials)
             .then(resp => {
                 localStorage.setItem("token", resp.data.token);
                 push('/login');
@@ -33,15 +33,12 @@ export default function SignUp() {
     }
     
     return (
-        <form
+        <form 
             onSubmit={signupSubmit}
         >
-            <div>
-                <h2>Sign Up!</h2>
-                <div>
-                    {credentials.username}
-                </div>
-                    <label>Username
+            <div className="form ">
+                <h2 >Sign Up!</h2>
+                    <label className="form-label">Username
                     <input
                         type="text"
                         name="username"
@@ -50,11 +47,8 @@ export default function SignUp() {
                         onChange={handleChange}
                     />
                     </label>
-                </div>
-            <div><div>
-                {credentials.password}
-            </div>
-                    <label>Password
+            
+                    <label className="form-label">Password
                     <input
                         type="password"
                         name="password"
@@ -63,10 +57,10 @@ export default function SignUp() {
                         onChange={handleChange}
                     />
                     </label>
-                <button
+                <button className="signupBtn"
                     // disabled={disabled}
                 >Sign Up!</button>
-            
+              
             </div>
         </form>
     )

@@ -21,7 +21,7 @@ export default function HomePage() {
                     <h1>African Marketplace</h1>
                     <hr />
                     <h2>Sauti Africa empowers small business owners, particularly women, <br />to improve their business and economic opportunities<br /> to grow out of poverty.</h2>
-                    <button onClick = {clickHandler}>Login</button>
+                    <button className="homebtn" onClick = {clickHandler}>Login</button>
                 </div>
             </header>
             {/* footer section */}
