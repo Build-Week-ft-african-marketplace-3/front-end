@@ -36,17 +36,17 @@ export default function SignUp() {
     // }
     
     return (
-        <form
+        <form 
             // onSubmit={onSubmit}
         >
-            <div>
-                <h2>Sign Up!</h2>
+            <div className="form ">
+                <h2 >Sign Up!</h2>
 
-                <div>
-                    <div>
+                
+                   
                         {/* {errors.email} */}
-                    </div>
-                    <label>Email
+                   
+                    <label className="form-label" >Email
                     <input
                         type="email"
                         name="email"
@@ -55,11 +55,11 @@ export default function SignUp() {
                         // onChange={onChange}
                     />
                     </label>
-                </div>
-                <div>
+              
+                
                     {/* {errors.username} */}
-                </div>
-                    <label>Username
+               
+                    <label className="form-label">Username
                     <input
                         type="text"
                         name="username"
@@ -68,11 +68,11 @@ export default function SignUp() {
                         // onChange={onChange}
                     />
                     </label>
-                </div>
-            <div><div>
+               
+           
                 {/* {errors.password} */}
-            </div>
-                    <label>Password
+            
+                    <label className="form-label">Password
                     <input
                         type="password"
                         name="password"
@@ -81,10 +81,10 @@ export default function SignUp() {
                         // onChange={onChange}
                     />
                     </label>
-                <button
+                <button className="signupBtn"
                     // disabled={disabled}
                 >Sign Up!</button>
-            
+              
             </div>
         </form>
     )

@@ -20,11 +20,11 @@
     margin-bottom: 5%;
   }
   /*search button*/
-  button {
+  .homebtn {
     background-color: #FFC300;
     color: #000814;
     /* font-weight: bold; */
-    font-size: 1em;
+    font-size: 1.2em;
     height: 3rem;
     width: 7rem;
     border-radius: 6px;
@@ -32,7 +32,7 @@
     margin-bottom: 1%;
     padding: 1%;
   } 
-  button:hover {
+  .homebtn:hover {
     background-color: #FFD60A;
   }
 
@@ -63,17 +63,17 @@
     margin-bottom: 3%;
   }
   /*footer a links*/
-  footer a {
+  /* footer a {
     padding: 1em 1.5em;
     /* border:1px solid red; */
-    justify-content: space-between;
+    /* justify-content: space-between;
     background-color: #FFC300;
     border-radius: 6px;
     margin-left:5%;
     margin-right: 5%;
     color: #000814;
     text-decoration: none;
-  }
+  } */ 
   /* a:hover{
     background-color: #FFD60A;
   } */
