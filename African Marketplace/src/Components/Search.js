@@ -10,12 +10,16 @@ export default function Search (props) {
     // ----- Update Input Field State -----
     const onChange = (event) => {
         setSearchText(event.target.value);
+        console.log('1-Event: ',event.target.value);
+        console.log('1-State: ',searchText);
+
+        setSearchResults(searchListings(searchText)); // <<<< Searches in real time
     }
 
     // ----- Submit Search -----
     const onSubmit = (event) => {
         event.preventDefault();
-        setSearchResults(searchListings(searchText));
+        setSearchResults(searchListings(searchText)); 
     }
 
     // ----- Search Listing items for search text ----- 
@@ -32,6 +36,15 @@ export default function Search (props) {
         }  
         return results;   
     }
+     // ----- Reset Listings ----- 
+    //  const resetForm = () => {
+    //      console.log('Clicked Reset');
+    //     setSearchResults(listings);
+    //  }
+    function resetForm () {
+        console.log('Clicked Reset');
+       setSearchResults(listings);
+    }
 
     // ----- Search bar text -----
     const onFocus= (e) => e.target.placeholder = '';
@@ -40,6 +53,7 @@ export default function Search (props) {
     return (
         <div className='search-container' >
             <form id='search-form' onSubmit={onSubmit}>
+            {/* <form id='search-form'> */}
                 <label>
                     <input 
                         id='search-bar' 
@@ -52,8 +66,13 @@ export default function Search (props) {
                     />
                 </label>
                 <button id='search-btn'>My Search</button>
+                {/* <button id='search-btn' onClick={onSubmit}>My Search</button> */}
+                {/* <button id='reset-btn' onClick={resetForm}>Reset</button> */} 
             </form>
         </div>
     )
 
 }
+
+<input type="submit" value="Submit" />
+
