@@ -73,6 +73,7 @@ const ModalContainer = styled.div`
     background: white;
     padding: 2rem;
     text-align: center;
+    border-radius: 2.5em;
 `
 
 const Label = styled.label`
