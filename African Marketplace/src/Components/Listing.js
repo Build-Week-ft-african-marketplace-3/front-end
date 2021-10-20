@@ -1,17 +1,17 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import axios from 'axios';
 import dummy_data from '../DummyData';
 import Search from './Search';
 import Item from './Item';
 
-
 const Listing = () => {
 	
 	// ----- Set State + Initial Values ----- 
-	const [ listings, setListings ] = useState(dummy_data);
+	//const [ listings, setListings ] = useState([]);    // Listings from API
+	const [ listings, setListings ] = useState(dummy_data); // Listings from Dummy Data
 	const [ searchResults, setSearchResults ] = useState(listings) // QUESTION: Pre-pop all or start empty
 
-	/* ----- Create a category header ----- <<<<< Will handle tomorrow
+	/* ----- PLACEHOLDER - Create a category header ----- 
 	let categories = [];
 	for (let i = 0; i < listings.length; i++){
 		!categories.includes(listings[i].commodity_category) && 
@@ -25,10 +25,9 @@ const Listing = () => {
 	}
 	*/
 
-	/* ----- API Get Placeholder ----
-	//----- Get Listing Data Via API -----
+	/* ----- PLACEHOLDER - Get listing data via API ----- 
     useEffect ( () => {
-        axios.get('https://african-marketplace-03.herokuapp.com/')
+        axios.get('https://african-marketplace-03.herokuapp.com/api/users')
             .then ( response => {
                 console.log('Response: ', response); // <------ ADD: after API provided
             })
@@ -37,6 +36,12 @@ const Listing = () => {
             })
     }, [])// <------ CONFIRM: Trigger on initial load?
 	*/
+	// Register new users with POST BaseURL + /api/auth/register
+	// Login as existing user with Post BaseURL + /api/auth/login
+	// Get a list of all users with GET BaseURL + /api/users
+	// Get a user by id with GET BaseURL + /api/users/:id
+	// And delete user by id with DELETE BaseURL + /api/users/:id
+
 
 	// ----- Loop listings, call Item.js for each ----- 
 	return (
