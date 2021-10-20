@@ -1,84 +1,66 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useHistory } from 'react-router';
 // import * as yup from 'yup'
-
-// const initialFormValues = { email: '', username: '', password: ''}
-// const initialFormErrors = { email: '', username: '', password: ''}
-
-// const initialSignUp = [];
-// const intialDisabled = true;
 
 export default function SignUp() {
 
-    // const [signUp , setSignUp] = useState (initialSignUp);
-    // const[formValues, setFormValues] = useState(initialFormValues);
-    // const[formErrors, setFormErrors] = useState(initialFormErrors);
-    // const[disabled, setDisabled] = useState(initialDisabled)
+    const { push } = useHistory();
+    const [credentials, setCredentials ] = useState({
+        username:"",
+        password:"",
+        error:""
+    })
 
-    // const onSubmit = evt => {
-    //     evt.preventDefualt()
-    //     axios.post('', signUp)
-    //         .then( res => {console.log(res.data)
-    //         }).catch(err => {console.error(err);
-    //         }).finally(() => {
-    //             setFormValues(initialFormValues);
-    //         }
-    // }
-    // const onChange = evt => {
-    //     const { name, value, type} = evt.target;
-    //    change(name, valueToUse)
-    // }
-    // const validate = (name, value) => {
-    //     yup.reach(schema, name)
-    //     .validate(value)
-    //     .then(() => setFormErrors({ ...formErrors, [name]: ''}))
-    //     .catch(err => setFormErrors({ ...formErrors, [name]: err.errors[0]}))
-    // }
+    const handleChange = e => {
+        setCredentials({
+            ...credentials,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    const signupSubmit = e => {
+        e.preventDefault();
+        axios
+            .post("https://african-marketplace-03.herokuapp.com/api/auth/signup",credentials)
+            .then(resp => {
+                localStorage.setItem("token", resp.data.token);
+                push('/login');
+            })
+            .catch(err=> {
+                console.log(err);
+            })
+    }
     
     return (
         <form
-            // onSubmit={onSubmit}
+            onSubmit={signupSubmit}
         >
             <div>
                 <h2>Sign Up!</h2>
-
                 <div>
-                    <div>
-                        {/* {errors.email} */}
-                    </div>
-                    <label>Email
-                    <input
-                        type="email"
-                        name="email"
-                        id ="email"
-                        // value={values.email}
-                        // onChange={onChange}
-                    />
-                    </label>
-                </div>
-                <div>
-                    {/* {errors.username} */}
+                    {credentials.username}
                 </div>
                     <label>Username
                     <input
                         type="text"
                         name="username"
                         id ="username"
-                        // value={values.username}
-                        // onChange={onChange}
+                        value={credentials.username}
+                        onChange={handleChange}
                     />
                     </label>
                 </div>
             <div><div>
-                {/* {errors.password} */}
+                {credentials.password}
             </div>
                     <label>Password
                     <input
                         type="password"
                         name="password"
                         id ="password"
-                        // value={values.password}
-                        // onChange={onChange}
+                        value={credentials.password}
+                        onChange={handleChange}
                     />
                     </label>
                 <button
