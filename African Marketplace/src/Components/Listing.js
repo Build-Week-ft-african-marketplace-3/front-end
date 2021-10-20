@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-import axios from 'axios';
 import axiosWithAuth from '../utils/axiosWithAuth';
 import dummy_data from '../DummyData';
 import Search from './Search';
@@ -30,7 +29,6 @@ const Listing = () => {
     useEffect ( () => {
         axiosWithAuth().get('https://african-marketplace-03.herokuapp.com/api/listings')
             .then ( response => {
-                console.log('Response: ', response.data);
 				setListings(response.data);
             })
             .catch( error => {
@@ -39,7 +37,7 @@ const Listing = () => {
     }, []) 
 
 	// ----- Search listing for search text ----- 
-	let searchListings = (searchText) => {
+	function searchListings (searchText){
 		let results = [];
 		for (let i = 0; i < listings.length; i++){
 			for (let key in listings[i]){
@@ -64,7 +62,6 @@ const Listing = () => {
 					return <Item item={item} key={item.product_id}/>
 				})
 				}
-
         	</div>
   
 		</div>
