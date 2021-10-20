@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Banner from '../images/banner.jpg';
+
 // import * as yup from 'yup'
 
 // const initialFormValues = { email: '', username: '', password: ''}
@@ -39,7 +41,9 @@ export default function SignUp() {
         <form 
             // onSubmit={onSubmit}
         >
+            {/* <img className="signup-img" src={Banner} alt="cartons of figs and strawberries"/>  */}
             <div className="form ">
+           
                 <h2 >Sign Up!</h2>
 
                 

@@ -34,10 +34,11 @@ const LogIn = () => {
     return (
         <ComponentContainer>
         <ModalContainer>
-            <Label>Welcome to African Marketplace</Label>
-            <Label>Please enter your account information.</Label>
+            <Title>Welcome to African Marketplace</Title>
+            <Title>Please enter your account information.</Title>
             <div>
             <FormGroup onSubmit={login}>
+                <Label>Username:
             <Input
                 id="username"
                 type="text"
@@ -45,6 +46,8 @@ const LogIn = () => {
                 value={credentials.username}
                 onChange={handleChange}
             />
+            </Label>
+            <Label>Password:
             <Input
                 id="password"
                 type="password"
@@ -52,6 +55,7 @@ const LogIn = () => {
                 value={credentials.password}
                 onChange={handleChange}
             />
+            </Label>
             <Button id="submit">Log in</Button>
             </FormGroup>
             <p id="error">{credentials.error}</p>
@@ -70,15 +74,27 @@ const ComponentContainer = styled.div`
 
 const ModalContainer = styled.div`
     width: 500px;
-    background: white;
+    background: #00030B;
     padding: 2rem;
     text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 1px 6px -2px rgb(210, 210, 210);
+    margin-top: 5%;
+    opacity: 0.85;
+`
+const Title = styled.label`
+    display: block;
+    font-size: 1.8rem;
+    color: #FFC300;
+    margin-bottom: 3%;
 `
 
 const Label = styled.label`
     display: block;
     font-size: 1.5rem;
-    color: #003566;
+    color: #FFC300;
+    text-align: left;
+    margin-bottom: 3%;
 `
 
 const FormGroup = styled.form`
@@ -87,13 +103,20 @@ const FormGroup = styled.form`
 
 const Input = styled.input`
     font-size: 1rem;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     width:100%;
 `
 
 const Button = styled.button`
-    padding:1rem;
-    width: 100%;
+    background-color: #FFC300;
+    color: #000814;
+    /* font-weight: bold; */
+    font-size: 1em;
+    height: 2rem;
+    width: 6rem;
+    border-radius: 6px;
+    margin-top: 5%;
+    padding: 1%;
 `
 
 
