@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import axios from 'axios';
 
 export default function Search (props) {
 
@@ -36,11 +35,7 @@ export default function Search (props) {
         }  
         return results;   
     }
-     // ----- Reset Listings ----- 
-    //  const resetForm = () => {
-    //      console.log('Clicked Reset');
-    //     setSearchResults(listings);
-    //  }
+    //  ----- Reset Listings ----- 
     function resetForm () {
         console.log('Clicked Reset');
        setSearchResults(listings);
@@ -52,8 +47,8 @@ export default function Search (props) {
 
     return (
         <div className='search-container' >
-            <form id='search-form' onSubmit={onSubmit}>
-            {/* <form id='search-form'> */}
+            {/* <form id='search-form' onSubmit={onSubmit}> */}
+            <form id='search-form'>
                 <label>
                     <input 
                         id='search-bar' 
@@ -65,9 +60,9 @@ export default function Search (props) {
                         onFocus={onFocus}
                     />
                 </label>
-                <button id='search-btn'>My Search</button>
-                {/* <button id='search-btn' onClick={onSubmit}>My Search</button> */}
-                {/* <button id='reset-btn' onClick={resetForm}>Reset</button> */} 
+                {/* <button id='search-btn'>My Search</button> */}
+                <button id='search-btn' onClick={onSubmit}>My Search</button>
+                <button id='reset-btn' onClick={resetForm}>Reset</button> 
             </form>
         </div>
     )
