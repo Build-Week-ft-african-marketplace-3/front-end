@@ -3,7 +3,7 @@ import axios from 'axios';
 import dummy_data from '../DummyData';
 import Search from './Search';
 import Item from './Item';
-
+import '../item.css';
 
 const Listing = () => {
 	
@@ -43,7 +43,7 @@ const Listing = () => {
 		<div>
 			<h2>Market Place Listings</h2>
 			<Search listings={listings} setSearchResults={setSearchResults}/>
-			<div className='listings-container'>
+			<div className='wrapper'>
 				{searchResults.map( item => {
 					return <Item item={item} key={item.id}/>
 				})}	
