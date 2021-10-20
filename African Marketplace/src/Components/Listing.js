@@ -31,6 +31,7 @@ const Listing = () => {
     useEffect ( () => {
         axiosWithAuth().get('https://african-marketplace-03.herokuapp.com/api/listings')
             .then ( response => {
+				console.log(response);
 				setListings(response.data);
             })
             .catch( error => {

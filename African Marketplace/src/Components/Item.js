@@ -19,9 +19,10 @@ const Item = (props) => {
         
         <div className="card">
             <div className="container">
-                <h2 className='title'><b>{item.commodity_product}</b></h2>
+                <h2 className='title'><b>{item.product_name}</b></h2>
                 <h4>{item.location}</h4>
-                <p>${item.price}</p>
+                <p>{item.product_description}</p>
+                <p>${item.product_price}</p>
             </div>
         </div>
         
