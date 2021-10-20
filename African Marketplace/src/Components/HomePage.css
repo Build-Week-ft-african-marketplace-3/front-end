@@ -32,9 +32,9 @@
     margin-bottom: 1%;
     padding: 1%;
   } 
-  button:hover {
+  /* button:hover {
     background-color: #FFD60A;
-  }
+  } */
 
   /*background image in header*/
   img{
@@ -75,9 +75,9 @@
     color: #000814;
     text-decoration: none;
   }
-  a:hover{
+  /* a:hover{
     background-color: #FFD60A;
-  }
+  } */
 
 /*Media*/
    @media(max-width: 700px) {

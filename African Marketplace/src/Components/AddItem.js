@@ -6,9 +6,10 @@ import axiosWithAuth from '../utils/axiosWithAuth';
 
 const AddItem = () => {
     const [product, setProduct] = useState({
-        commodity_category: "",
-        sub_category: "",
-        commodity_product: ""
+        name: "",
+        price: "",
+        description: "",
+        location: ""
     });
 
     const { push } = useHistory();
@@ -28,7 +29,7 @@ const AddItem = () => {
         //handle errors if any
     }
     
-    const { commodity_category, sub_category, commodity_product } = product;
+    const { name, price, description, location } = product;
 
 
 
@@ -37,16 +38,20 @@ const AddItem = () => {
             <form onSubmit={handleSubmit}>
             <div className="modal-body">					
                         <div className="form-group">
-                            <label>Title</label>
-                            <input value={commodity_category} onChange={handleChange} name="commodity_category" type="text" className="form-control"/>
+                            <label>Name</label>
+                            <input value={name} onChange={handleChange} name="name" type="text" className="form-control"/>
                         </div>
                         <div className="form-group">
-                            <label>Director</label>
-                            <input value={sub_category} onChange={handleChange} name="sub_category" type="text" className="form-control"/>
+                            <label>Price</label>
+                            <input value={price} onChange={handleChange} name="price" type="text" className="form-control"/>
                         </div>
                         <div className="form-group">
-                            <label>Genre</label>
-                            <input value={commodity_product} onChange={handleChange} name="commodity_product" type="text" className="form-control"/>
+                            <label>Description</label>
+                            <input value={description} onChange={handleChange} name="description" type="text" className="form-control"/>
+                        </div>
+                        <div className="form-group">
+                            <label>Location</label>
+                            <input value={location} onChange={handleChange} name="location" type="text" className="form-control"/>
                         </div>
                                         
             </div>
