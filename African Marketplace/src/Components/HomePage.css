@@ -1,6 +1,6 @@
   header {
     line-height: normal;
-    margin-top: 10%;
+    margin-top: 3%;
     width: 100%;
     position: center;  
   }
@@ -32,17 +32,16 @@
     margin-bottom: 1%;
     padding: 1%;
   } 
-  /* button:hover {
+  button:hover {
     background-color: #FFD60A;
-  } */
+  }
 
   /*background image in header*/
   img{
       position:absolute;
-      top:5%;
       opacity: 0.5;
       z-index: -1;
-      height:75%;
+      height:100%;
       width: 100%;
   }
   /*header div */
@@ -85,7 +84,8 @@
        margin-top:25%;
      }
      img{
-       height: 55%;
+       height: 80%;
+       position:absolute;
      }
      h1{
       margin-top:2%;

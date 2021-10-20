@@ -2,7 +2,13 @@ import React from 'react';
 import Banner from '../images/banner.jpg';
 
 
+
 export default function HomePage() {
+
+    const clickHandler = (e) => {
+        e.preventDefault();
+        
+}
 
     return (
        
@@ -15,15 +21,12 @@ export default function HomePage() {
                     <h1>African Marketplace</h1>
                     <hr />
                     <h2>Sauti Africa empowers small business owners, particularly women, <br />to improve their business and economic opportunities<br /> to grow out of poverty.</h2>
-                    <button>Search</button>
+                    <button onClick = {clickHandler}>Login</button>
                 </div>
             </header>
             {/* footer section */}
             <footer>
-                <a href="#" >Twitter</a>
-                <a href="#" >Facebook</a>
-                <a href="#" >Instagram</a>
-                <a href="#" >Email</a>
+               
             </footer>    
         </div>
         

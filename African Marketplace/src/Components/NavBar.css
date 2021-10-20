@@ -11,8 +11,8 @@ color:  #003566;
 	justify-content: center;
 	font-size: larger;
 	padding: 1%;
-	border-bottom: solid 5px #001d3d;
 	background-color: black;
+	opacity: 0.85;
 }
 .NavBar:hover {
 	color:  #ffd60a;
