@@ -1,4 +1,5 @@
 import React from "react";
+import '../item.css';
 
 const Item = (props) => {
 	
@@ -6,21 +7,25 @@ const Item = (props) => {
 	
     // ----- Post Item to the Listings page
 	return (
-        <div className='item-container'>
-            {/* ----- Dummy Data ----- */}
-            {/* <p><span style={{fontWeight: 'bold'}}>Item:</span> {item.commodity_product}</p>
-            <p><span style={{fontWeight: 'bold'}}>Price:</span> {item.price}</p>
-            <p><span style={{fontWeight: "bold"}}>Location:</span> {item.location}</p>
-            <p><span style={{fontWeight: 'bold'}}>Category:</span> {item.commodity_category} - {item.sub_category}</p> 
-            <hr/> */}
-            {/* ----- API Data ----- */}
-            {/* <img src='PLACEHOLDER' alt='PLACEHOLDER'/> */}
-            <p><span style={{fontWeight: 'bold'}}>Item:</span> {item.product_name}</p>
-            <p><span style={{fontWeight: 'bold'}}>Description:</span> {item.product_description}</p>
-            <p><span style={{fontWeight: "bold"}}>Location:</span> {item.location}</p>
-            <p><span style={{fontWeight: 'bold'}}>Price:</span> {item.product_price}</p>
-            <hr/>
+
+        // <div>
+            
+                /* <p><span style={{fontWeight: 'bold'}}>Product Name:</span> {item.commodity_product}</p>
+                <p><span style={{fontWeight: 'bold'}}>Price:</span> {item.price}</p>
+                <p><span style={{fontWeight: "bold"}}>Location:</span> {item.location}</p>
+                <p><span style={{fontWeight: 'bold'}}>Category:</span> {item.commodity_category}</p>
+                <hr/> */
+
+        
+        <div className="card">
+            <div className="container">
+                <h2 className='title'><b>{item.product_name}</b></h2>
+                <h4>{item.location}</h4>
+                <p>{item.product_description}</p>
+                <p>${item.product_price}</p>
+            </div>
         </div>
+        
 	)
 }
 export default Item;
