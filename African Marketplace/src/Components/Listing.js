@@ -27,7 +27,7 @@ const Listing = () => {
 
 	/* ----- PLACEHOLDER - Get listing data via API ----- 
     useEffect ( () => {
-        axios.get('https://african-marketplace-03.herokuapp.com/api/users')
+        axios.get('https://african-marketplace-03.herokuapp.com/api/listings')
             .then ( response => {
                 console.log('Response: ', response); // <------ ADD: after API provided
             })
@@ -35,13 +35,17 @@ const Listing = () => {
                 console.log('Get Error: ', error);
             })
     }, [])// <------ CONFIRM: Trigger on initial load?
-	*/
+	
 	// Register new users with POST BaseURL + /api/auth/register
 	// Login as existing user with Post BaseURL + /api/auth/login
 	// Get a list of all users with GET BaseURL + /api/users
 	// Get a user by id with GET BaseURL + /api/users/:id
 	// And delete user by id with DELETE BaseURL + /api/users/:id
-
+	// Add new listing with POST BaseURL + /api/listings
+	// Get a list of all listings with GET BaseURL + /api/listings
+	// Get a listing by id with GET BaseURL + /api/listings/:id
+	// And not yet functional but currently working on delete listing by id with DELETE BaseURL + /api/listings/:id
+	*/
 
 	// ----- Loop listings, call Item.js for each ----- 
 	return (
