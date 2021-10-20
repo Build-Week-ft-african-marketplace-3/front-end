@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";
 import axiosWithAuth from '../utils/axiosWithAuth';
-import dummy_data from '../DummyData';
 import Search from './Search';
 import Item from './Item';
+// import dummy_data from '../DummyData';
 
 /* ----- PLACEHOLDER FOR LISTING () - Create a category header ----- 
 	let categories = [];
