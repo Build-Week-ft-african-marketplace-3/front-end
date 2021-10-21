@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router';
-import Banner from '../images/banner.jpg';
+// import Banner from '../images/banner.jpg';
 // import * as yup from 'yup'
 
 export default function SignUp() {
@@ -35,7 +35,7 @@ export default function SignUp() {
     
     return (
         <div>
-            <img className="signup-img"src={Banner} alt="cartons of figs and strawberries"/>
+            {/* <img className="signup-img"src={Banner} alt="cartons of figs and strawberries"/> */}
         <form 
             onSubmit={signupSubmit}
         >
