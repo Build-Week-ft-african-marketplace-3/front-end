@@ -2,8 +2,6 @@ import React, {useState, useEffect} from "react";
 import axiosWithAuth from '../utils/axiosWithAuth';
 import Search from './Search';
 import Item from './Item';
-// import dummy_data from '../DummyData';
-
 import '../item.css';
 
 // import dummy_data from '../DummyData';
@@ -33,7 +31,6 @@ const Listing = () => {
     useEffect ( () => {
         axiosWithAuth().get('https://african-marketplace-03.herokuapp.com/api/listings')
             .then ( response => {
-				console.log(response);
 				setListings(response.data);
             })
             .catch( error => {
@@ -62,16 +59,21 @@ const Listing = () => {
 			<h2>Market Place Listings</h2>
 			<Search searchText={searchText} setSearchText={setSearchText}/>
 			<div className='listings-container'>
-			<div className='wrapper'>
-				{
-				searchListings(searchText).map( item => {
-					return <Item item={item} key={item.product_id}/>
-				})
-				}
-        	</div>
-  
+				<div className='wrapper'>
+					{
+					searchListings(searchText).map( item => {
+						return <Item item={item} key={item.product_id}/>
+					})
+					}
+				</div>
 			</div>
-			</div>
+		</div>
 	)
 }
 export default Listing;
+
+// ----- API FOR LISTING -----
+// Add new listing with POST BaseURL + /api/listings
+// Get a list of all listings with GET BaseURL + /api/listings
+// Get a listing by id with GET BaseURL + /api/listings/:id
+// And Delete listing by id with DELETE BaseURL + /api/listings/:id (edited) 
