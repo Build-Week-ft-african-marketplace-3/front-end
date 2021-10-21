@@ -61,7 +61,6 @@ const Listing = () => {
 		<div>
 			<h2>Market Place Listings</h2>
 			<Search searchText={searchText} setSearchText={setSearchText}/>
-			<div className='listings-container'>
 			<div className='wrapper'>
 				{
 				searchListings(searchText).map( item => {
@@ -70,7 +69,6 @@ const Listing = () => {
 				}
         	</div>
   
-			</div>
 			</div>
 	)
 }
