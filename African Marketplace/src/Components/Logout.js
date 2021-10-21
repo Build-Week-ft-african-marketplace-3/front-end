@@ -18,11 +18,11 @@ const Logout = () => {
 
     
     return (
-        <div>
+        <div className="form logout">
                      
             <h2>Whoa Cowgirl/Cowboy!</h2>
             <h2>Are you sure?</h2>
-            <button onClick={logout}>DO IT! LOG ME OUT! </button>
+            <button className="logout-btn" onClick={logout}>DO IT! LOG ME OUT! </button>
         </div>
     )
 }

@@ -18,3 +18,22 @@
 .add-btn:hover {
     background-color: #FFD60A;
 }
+/* logout page button*/
+.logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logout-btn {
+    background-color: #FFC300;
+    color: #000814;
+    font-size: 1em;
+    height: 2.5rem;
+    width: 12rem;
+    border-radius: 6px;
+    margin-top: 8%;
+    padding: 1%;   
+}
+.logout-btn:hover {
+    background-color: #FFD60A;
+}
