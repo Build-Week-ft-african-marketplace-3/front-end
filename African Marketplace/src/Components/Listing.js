@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from "react";
-import axiosWithAuth from '../utils/axiosWithAuth';
+
 import Search from './Search';
 import Item from './Item';
+import getListings from './../utils/getListings';
+
+import AddItem from "./AddItem";
 // import dummy_data from '../DummyData';
 
 import '../item.css';
@@ -31,15 +34,8 @@ const Listing = () => {
 	
 	// ----- Get listing data via API ----- 
     useEffect ( () => {
-        axiosWithAuth().get('https://african-marketplace-03.herokuapp.com/api/listings')
-            .then ( response => {
-				console.log(response);
-				setListings(response.data);
-            })
-            .catch( error => {
-                console.log('Get Error: ', error);
-            })
-    }, []) 
+        getListings(setListings);
+    }, [listings]) 
 
 	// ----- Search listing for search text ----- 
 	function searchListings (searchText){
@@ -60,6 +56,7 @@ const Listing = () => {
 	return (
 		<div>
 			<h2>Market Place Listings</h2>
+			<AddItem setListings={setListings}/>
 			<Search searchText={searchText} setSearchText={setSearchText}/>
 			<div className='wrapper'>
 				{

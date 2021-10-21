@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import './Components/HomePage.css';
 import './Components/SignUp.css';
@@ -13,6 +14,7 @@ import PrivateRoute from './utils/PrivateRoute';
 import Logout from './Components/Logout';
 
 function App() {
+
   return (
     <div className="App">
       <NavBar />
@@ -23,8 +25,11 @@ function App() {
         <Route path="/signup" component={SignUp}/>
         <Route path="/login" component={LogIn} />
       <PrivateRoute path="/listings" component={Listing} />
-      <PrivateRoute path="/addlisting" component={AddItem} />
+
+      <PrivateRoute path="/add" component={AddItem} />
+      
       <PrivateRoute path="/logout" component={Logout}/>
+
     </div>
   );
 }
