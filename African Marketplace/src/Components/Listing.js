@@ -26,18 +26,6 @@ const Listing = () => {
 	const [ listings, setListings ] = useState([]); // Listings from API
 	// const [ listings, setListings ] = useState(dummy_data); // Listings from Dummy Data
 	
-	
-	// ----- Get listing data via API ----- 
-    useEffect ( () => {
-        axiosWithAuth().get('https://african-marketplace-03.herokuapp.com/api/listings')
-            .then ( response => {
-				setListings(response.data);
-            })
-            .catch( error => {
-                console.log('Get Error: ', error);
-            })
-    }, []) 
-
 	// ----- Search listing for search text ----- 
 	function searchListings (searchText){
 		let results = [];
@@ -53,19 +41,42 @@ const Listing = () => {
 		return results;   
 	}
 
+	// ----- Delete listing data via API ----- 
+	function deleteItem (event) {
+		const productId = event.target.id;
+		console.log('Delete Item: ', productId);
+		axiosWithAuth().delete(`https://african-marketplace-03.herokuapp.com/api/listings/${productId}`)
+			.then(response => {
+				console.log('Response: ', response);
+				setListings( listings.filter(item => (item.product_id !== productId)) );
+			})
+			.catch(error => {
+				console.log(error);
+			})
+	}
+
+	// ----- Get listing data via API ----- 
+    useEffect ( () => {
+        axiosWithAuth().get('https://african-marketplace-03.herokuapp.com/api/listings')
+            .then ( response => {
+				setListings(response.data);
+            })
+            .catch( error => {
+                console.log('Get Error: ', error);
+            })
+    }, []) 
+
 	// ----- Loop listings, call Item.js for each ----- 
 	return (
 		<div>
 			<h2>Market Place Listings</h2>
 			<Search searchText={searchText} setSearchText={setSearchText}/>
-			<div className='listings-container'>
-				<div className='wrapper'>
-					{
-					searchListings(searchText).map( item => {
-						return <Item item={item} key={item.product_id}/>
-					})
-					}
-				</div>
+			<div className='wrapper'>
+				{
+				searchListings(searchText).map( item => {
+					return <Item item={item} key={item.product_id} deleteItem={deleteItem}/>
+				})
+				}
 			</div>
 		</div>
 	)

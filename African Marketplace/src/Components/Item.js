@@ -4,42 +4,28 @@ import '../item.css';
 
 const Item = (props) => {
 	
-	const { item } = props;
-	
-    function deleteItem (event){
-        console.log('Delete Item Clicked!');
-        const itemId = event.target.id;
-        axiosWithAuth().delete(`https://african-marketplace-03.herokuapp.com/api/listings/:${itemId}`)
-            .then(response => {
-                console.log('Response: ', response);
-            })
-            .catch(error => {
-                console.log(error);
-            })
-    }
+	const { item, deleteItem } = props;
 
     // ----- Post Item to the Listings page
 	return (
 
         <div className="card">
-            <div className="container">
                 
-                {/* ----- DUMMY DATA -----
-                <p><span style={{fontWeight: 'bold'}}>Product Name:</span> {item.product_name}</p>
-                <p><span style={{fontWeight: 'bold'}}>Price:</span> {item.product_description}</p>
-                <p><span style={{fontWeight: 'bold'}}>Price:</span> {item.product_price}</p>
-                <p><span style={{fontWeight: "bold"}}>Location:</span> {item.location}</p>
-                <p><span style={{fontWeight: 'bold'}}>Category:</span> {item.commodity_category}</p> 
-                <hr/>*/}
+            {/* ----- DUMMY DATA -----
+            <p><span style={{fontWeight: 'bold'}}>Product Name:</span> {item.product_name}</p>
+            <p><span style={{fontWeight: 'bold'}}>Price:</span> {item.product_description}</p>
+            <p><span style={{fontWeight: 'bold'}}>Price:</span> {item.product_price}</p>
+            <p><span style={{fontWeight: "bold"}}>Location:</span> {item.location}</p>
+            <p><span style={{fontWeight: 'bold'}}>Category:</span> {item.commodity_category}</p> 
+            <hr/>*/}
 
-                {/* ----- API DATA ----- */}
-                <h2 className='title'><b>{item.product_name}</b></h2>
-                <h4>{item.location}</h4>
-                <p>{item.product_description}</p>
-                <p>${item.product_price}</p>
+            {/* ----- API DATA ----- */}
+            <h2 className='title'><b>{item.product_name.toUpperCase()}</b></h2>
+            <h4>{item.location}</h4>
+            <p>{item.product_description}</p>
+            <p>${item.product_price}</p>
             
-            </div>
-            <button id={item.product_id} className="delete-button" onClick={deleteItem}>Delete Item!</button><br/>
+            <button id={item.product_id} className="delete-button" onClick={deleteItem}>Delete Product!</button><br/>
         </div>
         
 	)
