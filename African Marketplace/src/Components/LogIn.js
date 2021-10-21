@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useHistory } from 'react-router';
-import Banner from '../images/banner.jpg';
+// import Banner from '../images/banner.jpg';
 
 
 
@@ -35,7 +35,7 @@ const LogIn = () => {
     }
     return (
         <ComponentContainer>
-            <img className='login-img' src={Banner} alt='cartons of figs and strawberries'/>
+            {/* <img className='login-img' src={Banner} alt='cartons of figs and strawberries'/> */}
         <ModalContainer>
             <Title>Welcome to African Marketplace</Title>
             <Title>Please enter your account information.</Title>
