@@ -43,7 +43,7 @@ const AddItem = (props) => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-            <div className="modal-body">					
+            <div className="form">					
                         <div className="form-group">
                             <label>Name</label>
                             <input value={product_name} onChange={handleChange} name="product_name" type="text" className="form-control"/>
@@ -55,18 +55,21 @@ const AddItem = (props) => {
                         <div className="form-group">
                             <label>Description</label>
                             <input value={product_description} onChange={handleChange} name="product_description" type="text" className="form-control"/>
+
                         </div>
                         <div className="form-group">
-                            <label>Location</label>
-                            <input value={location} onChange={handleChange} name="location" type="text" className="form-control"/>
+                            <label className="form-label">Location</label>
+                            <input id="add-item" value={location} onChange={handleChange} name="location" type="text" className="form-control"/>
                         </div>
                                         
-            </div>
+            
                     <div className="modal-footer">			    
+
                         <input type="submit" className="btn btn-info" value="ADD"/>
+
                     </div>
 
-
+                </div>
 
             </form>
         </div>

@@ -58,7 +58,6 @@ const Listing = () => {
 			<h2>Market Place Listings</h2>
 			<AddItem setListings={setListings}/>
 			<Search searchText={searchText} setSearchText={setSearchText}/>
-			<div className='listings-container'>
 			<div className='wrapper'>
 				{
 				searchListings(searchText).map( item => {
@@ -67,7 +66,6 @@ const Listing = () => {
 				}
         	</div>
   
-			</div>
 			</div>
 	)
 }
