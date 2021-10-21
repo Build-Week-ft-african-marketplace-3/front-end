@@ -43,12 +43,12 @@ const Listing = () => {
 
 	// ----- Delete listing data via API ----- 
 	function deleteItem (event) {
-		const productId = event.target.id;
-		console.log('Delete Item: ', productId);
-		axiosWithAuth().delete(`https://african-marketplace-03.herokuapp.com/api/listings/${productId}`)
+		const itemId = event.target.id;
+		console.log('Delete Item: ', itemId);
+		axiosWithAuth().delete(`https://african-marketplace-03.herokuapp.com/api/listings/${itemId}`)
 			.then(response => {
 				console.log('Response: ', response);
-				setListings( listings.filter(item => (item.product_id !== productId)) );
+				setListings( listings.filter(item => (item.product_id !== itemId)) );
 			})
 			.catch(error => {
 				console.log(error);
