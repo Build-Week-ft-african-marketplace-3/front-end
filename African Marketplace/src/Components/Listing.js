@@ -35,7 +35,7 @@ const Listing = () => {
 	// ----- Get listing data via API ----- 
     useEffect ( () => {
         getListings(setListings);
-    }, [listings]) 
+    }, []) 
 
 	// ----- Search listing for search text ----- 
 	function searchListings (searchText){
