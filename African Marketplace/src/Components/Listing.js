@@ -48,7 +48,6 @@ const Listing = () => {
 		axiosWithAuth().delete(`https://african-marketplace-03.herokuapp.com/api/listings/${itemId}`)
 			.then(response => {
 				console.log('Response: ', response);
-				setListings( listings.filter(item => (item.product_id !== itemId)) );
 			})
 			.catch(error => {
 				console.log(error);
@@ -64,7 +63,8 @@ const Listing = () => {
             .catch( error => {
                 console.log('Get Error: ', error);
             })
-    }, []) 
+    }, [listings]) 
+
 
 	// ----- Loop listings, call Item.js for each ----- 
 	return (
