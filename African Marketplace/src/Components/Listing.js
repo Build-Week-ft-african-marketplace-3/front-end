@@ -4,6 +4,10 @@ import Search from './Search';
 import Item from './Item';
 // import dummy_data from '../DummyData';
 
+import '../item.css';
+
+// import dummy_data from '../DummyData';
+
 /* ----- PLACEHOLDER FOR LISTING () - Create a category header ----- 
 	let categories = [];
 	for (let i = 0; i < listings.length; i++){
@@ -29,6 +33,7 @@ const Listing = () => {
     useEffect ( () => {
         axiosWithAuth().get('https://african-marketplace-03.herokuapp.com/api/listings')
             .then ( response => {
+				console.log(response);
 				setListings(response.data);
             })
             .catch( error => {
@@ -57,6 +62,7 @@ const Listing = () => {
 			<h2>Market Place Listings</h2>
 			<Search searchText={searchText} setSearchText={setSearchText}/>
 			<div className='listings-container'>
+			<div className='wrapper'>
 				{
 				searchListings(searchText).map( item => {
 					return <Item item={item} key={item.product_id}/>
@@ -64,7 +70,8 @@ const Listing = () => {
 				}
         	</div>
   
-		</div>
+			</div>
+			</div>
 	)
 }
 export default Listing;
