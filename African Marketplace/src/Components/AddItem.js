@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import { useHistory } from 'react-router';
 import axiosWithAuth from '../utils/axiosWithAuth';
 
 
-const AddItem = () => {
+const AddItem = (props) => {
     const [product, setProduct] = useState({
-        name: "",
-        price: "",
-        description: "",
+        product_name: "",
+        product_price: "",
+        product_description: "",
         location: ""
     });
-
-    const { push } = useHistory();
+    
+    const { setListings } = props;
 
     const handleChange = (e) => {
         setProduct({
@@ -23,13 +21,22 @@ const AddItem = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        axiosWithAuth().post(`api/listings`, product)
+            .then(res => {
+                console.log(res);
+                setListings(res.data);
+                
+            })
+            .catch(err => {
+                console.log(err);
+              });
         // make axios call to post a new product
         // set local storage to match server data
         // push to items list
         //handle errors if any
     }
     
-    const { name, price, description, location } = product;
+    const { product_name, product_price, product_description, location } = product;
 
 
 
@@ -39,15 +46,15 @@ const AddItem = () => {
             <div className="modal-body">					
                         <div className="form-group">
                             <label>Name</label>
-                            <input value={name} onChange={handleChange} name="name" type="text" className="form-control"/>
+                            <input value={product_name} onChange={handleChange} name="product_name" type="text" className="form-control"/>
                         </div>
                         <div className="form-group">
                             <label>Price</label>
-                            <input value={price} onChange={handleChange} name="price" type="text" className="form-control"/>
+                            <input value={product_price} onChange={handleChange} name="product_price" type="text" className="form-control"/>
                         </div>
                         <div className="form-group">
                             <label>Description</label>
-                            <input value={description} onChange={handleChange} name="description" type="text" className="form-control"/>
+                            <input value={product_description} onChange={handleChange} name="product_description" type="text" className="form-control"/>
                         </div>
                         <div className="form-group">
                             <label>Location</label>
@@ -56,7 +63,7 @@ const AddItem = () => {
                                         
             </div>
                     <div className="modal-footer">			    
-                        <input type="submit" className="btn btn-info" value="Save"/>
+                        <input type="submit" className="btn btn-info" value="ADD"/>
                     </div>
 
 
