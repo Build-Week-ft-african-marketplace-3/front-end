@@ -5,27 +5,12 @@ import Item from './Item';
 import AddItem from './AddItem';
 import '../item.css';
 
-// import dummy_data from '../DummyData';
-
-/* ----- PLACEHOLDER FOR LISTING () - Create a category header ----- 
-	let categories = [];
-	for (let i = 0; i < listings.length; i++){
-		!categories.includes(listings[i].commodity_category) && 
-		categories.push(listings[i].commodity_category);
-	}
-	for (let i = 0; i < categories.length; i++){
-		console.log(" -- " + categories[i].toUpperCase() + " -- ");  //title elements
-		let filtered = data.filter(item => item.cat === categories[i]);
-		console.log(filtered);
-	}
-	*/
 
 const Listing = () => {
 	
 	// ----- Set State + Initial Values ----- 
 	const [ searchText, setSearchText ] = useState('');
 	const [ listings, setListings ] = useState([]); // Listings from API
-	// const [ listings, setListings ] = useState(dummy_data); // Listings from Dummy Data
 	
 	// ----- Search listing for search text ----- 
 	function searchListings (searchText){

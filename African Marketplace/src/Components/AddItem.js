@@ -23,7 +23,7 @@ const AddItem = (props) => {
         e.preventDefault();
         axiosWithAuth().post(`api/listings`, product)
             .then(res => {
-                console.log(res);
+                console.log(res.data);
                 setListings(res.data);
                 
             })
