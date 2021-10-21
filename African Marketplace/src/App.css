@@ -45,7 +45,11 @@ q:before, q:after {
 
 /* Styling starts here */
 .App {
-  text-align: center;
+   text-align: center;
+   color: #FAF9F6;
+  font-family: 'Georama', sans-serif;
+  font-size: 1em;
+ 
 }
 
 .App-logo {
@@ -83,11 +87,12 @@ q:before, q:after {
   }
 }
 
-body {
-  background-color: #003566;
-  color: #FAF9F6;
-  font-family: 'Georama', sans-serif;
-  font-size: 1em;
+body { 
+  
+ 
+  
+ 
+
 }
 
 /* button {
@@ -137,14 +142,3 @@ footer a {
 } */
 
 
-/* Banner */
-
-/* img {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  z-index: -1;
-} */
