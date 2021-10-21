@@ -36,30 +36,30 @@ const AddItem = () => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-            <div className="modal-body">					
+            <div className="form">					
                         <div className="form-group">
-                            <label>Name</label>
-                            <input value={name} onChange={handleChange} name="name" type="text" className="form-control"/>
+                            <label className="form-label">Name</label>
+                            <input id="add-item" value={name} onChange={handleChange} name="name" type="text" className="form-control"/>
                         </div>
                         <div className="form-group">
-                            <label>Price</label>
-                            <input value={price} onChange={handleChange} name="price" type="text" className="form-control"/>
+                            <label className="form-label">Price</label>
+                            <input id="add-item" value={price} onChange={handleChange} name="price" type="text" className="form-control"/>
                         </div>
                         <div className="form-group">
-                            <label>Description</label>
-                            <input value={description} onChange={handleChange} name="description" type="text" className="form-control"/>
+                            <label className="form-label">Description</label>
+                            <input id="add-item" value={description} onChange={handleChange} name="description" type="text" className="form-control"/>
                         </div>
                         <div className="form-group">
-                            <label>Location</label>
-                            <input value={location} onChange={handleChange} name="location" type="text" className="form-control"/>
+                            <label className="form-label">Location</label>
+                            <input id="add-item" value={location} onChange={handleChange} name="location" type="text" className="form-control"/>
                         </div>
                                         
-            </div>
+            
                     <div className="modal-footer">			    
-                        <input type="submit" className="btn btn-info" value="Save"/>
+                        <input type="submit" className="btn btn-info add-btn" value="Save"/>
                     </div>
 
-
+                </div>
 
             </form>
         </div>

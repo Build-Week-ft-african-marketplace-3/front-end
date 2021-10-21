@@ -1,6 +1,7 @@
 import './App.css';
 import './Components/HomePage.css';
 import './Components/SignUp.css';
+import './Components/AddItem.css'
 import HomePage from './Components/HomePage'
 import NavBar from './Components/NavBar'
 import SignUp from './Components/SignUp';
