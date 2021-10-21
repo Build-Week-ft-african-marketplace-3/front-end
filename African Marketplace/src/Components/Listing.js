@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import axiosWithAuth from '../utils/axiosWithAuth';
 import Search from './Search';
 import Item from './Item';
+import AddItem from './AddItem';
 import '../item.css';
 
 // import dummy_data from '../DummyData';
@@ -70,6 +71,7 @@ const Listing = () => {
 	return (
 		<div>
 			<h2>Market Place Listings</h2>
+			<AddItem setListings={setListings}/>
 			<Search searchText={searchText} setSearchText={setSearchText}/>
 			<div className='wrapper'>
 				{
