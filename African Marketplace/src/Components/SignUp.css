@@ -1,25 +1,34 @@
 /*Sign Up page*/
 
 .form {
-    background-color: #0a5494;
-    border-radius: 6px;
+    background-color: #00030B;
+    border-radius: 8px;
     box-shadow: 0px 1px 6px -2px rgb(210, 210, 210);
-    padding: 16px;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-top: 5%;
-    margin-right: 30%;
-    margin-left: 30%;
+    margin-right: 25%;
+    margin-left: 25%;
+    opacity: 0.85;
 }
 .form h2 {
-    margin-bottom: 10%;
-    font-size: 2.3em;
+    margin-bottom: 5%;
+    font-size: 1.8em;
+    color:#FFC300;
 }
  .form-label{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5%; 
+    display: block;
+    font-size: 1.5rem;
+    color: #FFC300;
+    text-align: left;
+    margin-bottom:3%;
+}
+.form-label input {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    width:100%;
 }
 
 .signupBtn{
@@ -36,4 +45,25 @@
 }
 .signupBtn:hover {
     background-color: #FFD60A;
+}
+.signup-img{
+    position:absolute;
+    opacity: 0.5;
+    z-index: -1;
+    height:90%;
+    width: 100%;
+    margin-left: -50%;
+    margin-top: -7.8%;
+  
+} 
+
+/*Login page Background image*/
+ .login-img{
+    position:absolute;
+    opacity: 0.5;
+    z-index: -1;
+    height:90%;
+    width: 100%;
+    /* margin-left: -50%; */
+    margin-top: 20.19%;
 }

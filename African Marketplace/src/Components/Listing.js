@@ -2,6 +2,8 @@ import React, {useState, useEffect} from "react";
 import axiosWithAuth from '../utils/axiosWithAuth';
 import Search from './Search';
 import Item from './Item';
+// import dummy_data from '../DummyData';
+
 import '../item.css';
 
 // import dummy_data from '../DummyData';
@@ -59,6 +61,7 @@ const Listing = () => {
 		<div>
 			<h2>Market Place Listings</h2>
 			<Search searchText={searchText} setSearchText={setSearchText}/>
+			<div className='listings-container'>
 			<div className='wrapper'>
 				{
 				searchListings(searchText).map( item => {
@@ -67,7 +70,8 @@ const Listing = () => {
 				}
         	</div>
   
-		</div>
+			</div>
+			</div>
 	)
 }
 export default Listing;
