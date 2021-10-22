@@ -16,10 +16,9 @@ export default function Search (props) {
     }
 
     return (
-        <div className='search-container' >
             <form id='search-form' onSubmit={onSubmit}>
             {/* <form id='search-form'> */}
-                <label>
+                <label id='search-label'> Search: </label>
                     <input 
                         id='search-bar' 
                         type='text' 
@@ -28,9 +27,7 @@ export default function Search (props) {
                         onChange={onChange}
                         placeholder="Search listings..."
                     />
-                </label>
             </form>
-        </div>
     )
 }
 
