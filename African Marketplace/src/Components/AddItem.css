@@ -37,3 +37,13 @@
 .logout-btn:hover {
     background-color: #FFD60A;
 }
+.addform{
+    width: 100%;
+    margin: 1.3em;
+    margin-left: -1em;
+}
+.display-btn{
+    margin-top: 0%;
+    padding: .5em;
+    margin-bottom:.5em;
+}

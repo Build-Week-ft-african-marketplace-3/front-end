@@ -10,7 +10,7 @@ const AddItem = (props) => {
         location: ""
     });
     
-    const { setListings } = props;
+    const { setListings, addDisplay } = props;
 
     const handleChange = (e) => {
         setProduct({
@@ -43,18 +43,18 @@ const AddItem = (props) => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-            <div className="form">					
+                <div className="form addform" style={{display: addDisplay ? "inline-block" : "none"}}>
                         <div className="form-group">
-                            <label>Name</label>
-                            <input value={product_name} onChange={handleChange} name="product_name" type="text" className="form-control"/>
+                            <label className="form-label">Name</label>
+                            <input id="add-item" value={product_name} onChange={handleChange} name="product_name" type="text" className="form-control"/>
                         </div>
                         <div className="form-group">
-                            <label>Price</label>
-                            <input value={product_price} onChange={handleChange} name="product_price" type="text" className="form-control"/>
+                            <label className="form-label">Price</label>
+                            <input id="add-item" value={product_price} onChange={handleChange} name="product_price" type="text" className="form-control"/>
                         </div>
                         <div className="form-group">
-                            <label>Description</label>
-                            <input value={product_description} onChange={handleChange} name="product_description" type="text" className="form-control"/>
+                            <label className="form-label">Description</label>
+                            <input id="add-item" value={product_description} onChange={handleChange} name="product_description" type="text" className="form-control"/>
 
                         </div>
                         <div className="form-group">
@@ -65,7 +65,7 @@ const AddItem = (props) => {
             
                     <div className="modal-footer">			    
 
-                        <input type="submit" className="btn btn-info" value="ADD"/>
+                        <input type="submit" className="add-btn" value="ADD"/>
 
                     </div>
 

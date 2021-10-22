@@ -10,7 +10,14 @@ const Listing = () => {
 	
 	// ----- Set State + Initial Values ----- 
 	const [ searchText, setSearchText ] = useState('');
-	const [ listings, setListings ] = useState([]); // Listings from API
+	const [listings, setListings] = useState([]); // Listings from API
+	const [addDisplay, setAddDisplay] = useState(false);
+
+
+	const addHandler = e => {
+		e.preventDefault();
+		setAddDisplay(!addDisplay);
+	}
 	
 	// ----- Search listing for search text ----- 
 	function searchListings (searchText){
@@ -56,9 +63,12 @@ const Listing = () => {
 	return (
 		<div>
 			<h2>Market Place Listings</h2>
-			<AddItem setListings={setListings}/>
+			<div className={"search-post"}>
+			<button className={"logout-btn display-btn"} onClick={addHandler}>{ addDisplay ? "Hide" : "Post Your Product"}</button>
+			<AddItem setListings={setListings} addDisplay={ addDisplay}/>
 			<Search searchText={searchText} setSearchText={setSearchText}/>
-			<div className='wrapper'>
+			</div>
+				<div className='wrapper'>
 				{
 				searchListings(searchText).map( item => {
 					return <Item item={item} key={item.product_id} deleteItem={deleteItem}/>
