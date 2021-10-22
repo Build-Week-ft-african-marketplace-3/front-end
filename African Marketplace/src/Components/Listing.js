@@ -3,7 +3,7 @@ import axiosWithAuth from '../utils/axiosWithAuth';
 import Search from './Search';
 import Item from './Item';
 import AddItem from './AddItem';
-import '../item.css';
+import './item.css';
 
 
 const Listing = () => {
@@ -64,9 +64,9 @@ const Listing = () => {
 		<div>
 			<h2>Market Place Listings</h2>
 			<div className={"search-post"}>
-			<button className={"logout-btn display-btn"} onClick={addHandler}>{ addDisplay ? "Hide" : "Post Your Product"}</button>
-			<AddItem setListings={setListings} addDisplay={ addDisplay}/>
-			<Search searchText={searchText} setSearchText={setSearchText}/>
+				<Search searchText={searchText} setSearchText={setSearchText} />
+				<button className={"logout-btn display-btn"} onClick={addHandler}>{ addDisplay ? "Hide" : "Post Your Product"}</button>
+				<AddItem setListings={setListings} addDisplay={addDisplay} />
 			</div>
 				<div className='wrapper'>
 				{
