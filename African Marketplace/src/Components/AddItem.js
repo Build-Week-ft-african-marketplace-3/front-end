@@ -3,12 +3,13 @@ import axiosWithAuth from '../utils/axiosWithAuth';
 
 
 const AddItem = (props) => {
-    const [product, setProduct] = useState({
+    const initialState = {
         product_name: "",
         product_price: "",
         product_description: "",
         location: ""
-    });
+    }
+    const [product, setProduct] = useState(initialState);
     
     const { setListings, addDisplay } = props;
 
@@ -25,7 +26,7 @@ const AddItem = (props) => {
             .then(res => {
                 console.log(res.data);
                 setListings(res.data);
-                
+                setProduct(initialState);
             })
             .catch(err => {
                 console.log(err);
