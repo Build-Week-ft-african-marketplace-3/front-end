@@ -1,14 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // import Banner from '../images/banner.jpg';
 
 
 
 export default function HomePage() {
 
-    const clickHandler = (e) => {
-        e.preventDefault();
-        
-}
 
     return (
        
@@ -21,7 +18,7 @@ export default function HomePage() {
                     <h1 className="home-h1">African Marketplace</h1>
                     <hr className="home-hr"/>
                     <h2 className="home-h2">Sauti Africa empowers small business owners, particularly women, <br />to improve their business and economic opportunities<br /> to grow out of poverty.</h2>
-                    <button className="homebtn" onClick = {clickHandler}>Login</button>
+                    <Link to="/login" className="homebtn">Login</Link>
                 </div>
             </header>
             {/* footer section */}

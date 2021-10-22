@@ -1,5 +1,4 @@
 import React from "react";
-import axiosWithAuth from '../utils/axiosWithAuth';
 import '../item.css';
 
 const Item = (props) => {
@@ -25,7 +24,7 @@ const Item = (props) => {
             <p>{item.product_description}</p>
             <p>${item.product_price}</p>
             
-            <button id={item.product_id} className="delete-button" onClick={deleteItem}>Delete Product!</button><br/>
+            <button id={item.product_id} className="delete-btn" onClick={deleteItem}>Delete Product!</button><br/>
         </div>
         
 	)

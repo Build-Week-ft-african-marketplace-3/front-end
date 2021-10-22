@@ -40,12 +40,11 @@
     background-color: #FFC300;
     color: #000814;
     /* font-weight: bold; */
-    font-size: 1.2em;
-    height: 3rem;
-    width: 7rem;
+    font-size: 1.5em;
+    text-decoration: none;;
+    height: 2rem;
+    width: 8rem;
     border-radius: 6px;
-    margin-top: 1%;
-    margin-bottom: 1%;
     padding: 1%;
   } 
   .homebtn:hover {
